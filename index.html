@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astrology Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather|Monserrat|Sacramento" rel="stylesheet">
+  </head>
+  <body>
+  <div class="top-container">
+    <img class="top-cloud" src="CSS/images/cloud.png" alt="cloud-img">
+    <h1>Astrology Calculator!</h1>
+    <!-- <h2>a <span class="pro">pro</span>grammer.</h2> -->
+    <img class="bottom-cloud"src="CSS/images/cloud.png" alt="cloud-img">
+    <img src="CSS/images/Signs.webp" width="300" height="300" alt="mountain-img" >
+  </div>
+  <div class="middle-container">
+<!--  <div class="profile">
+    <img src="CSS/images/arshia.png.JPG" width="300" height="400" alt="Profile Picture">
+    <h2>Hello.</h2>
+    <p class="intro">I am a rising senior and I love to dance, sing, swim, and watch Tik Toks haha.</p>
+  </div>
+  <hr>
+  <div class="skills">
+    <h2>My Skills.</h2>
+    <div class="skill-row">
+      <img class="nail" src="CSS/images/nail art.jpeg" width="300" height="400" alt="">
+      <h3>Nail Art</h3>
+      <p>I love painting my nails and making cool designs according to the time of year .</p>
+    </div>
+    <div class="skill-row">
+      <img class="makeup" src="CSS/images/makeup.jpeg" width="300" height="400" alt="makeup pic">
+      <h3>Makeup</h3>
+      <p>I have always loved the idea of makeup... it makes me feel older, more confident, and beautiful!</p>
+    </div>
+  </div>
+  <hr> -->
+  <div class="zodiac">
+    <h2>Find out more about your zodiac!</h2>
+
+
+    <!--<form >
+      <label for="fname">Birthday Month (number):</label><br>
+      <input type="text" id="fname" name="fname" value="ex.4 "><br>
+      <label for="lname">Date:</label><br>
+      <input type="text" id="lname" name="lname" value="ex. 19"><br><br>
+    </form> -->
+    <!--<h3>Email me!</h3> -->
+    <!--<p class="contact-message"> Are you also a rising senior struggling to find an essay topic? Let's Chat! ;)</p>-->
+    <label for="fname">Birthday Month (number):</label><br>
+    <input id="text_a" type="text" />
+    <p id="answer1"></p>
+    <label for="lname">Date:</label><br>
+    <input id="text_b" type="text" />
+    <p id="answer2"></p>
+
+    <a class="btn" onclick="myFunction()">Calculate</a>
+  </div>
+
+</div>
+ <script>
+   function myFunction() {
+     var a=document.getElementById("text_a").value;
+     var b= document.getElementById("text_b").value;
+
+if (a == 12 && b >= 22 && b <= 31 || a == 1 && b <= 19 )
+  {
+document.getElementById("answer2").innerText="Your sign is Capricorn. \nThis means you are ambitious, determined, materialistic and strong. \nElement: Earth \nMode: Cardinal \nRuling Planet: Saturn!";
+}
+else if (a == 1 && b >= 20 && b <= 31 || a == 2 && b <= 18){
+  document.getElementById("answer2").innerText="Your sign is Aquarius. \nThis means you are advanced, self-reliant, clever, exceptional, and optimistic. \nElement: Air \nMode: Fixed \nRuling Planet: Uranus";
+
+   }
+else if(a == 2 && b >= 19 && b <= 29 || a == 3 && b <= 20){
+  document.getElementById("answer2").innerText="Your sign is Pisces. \nThis means you are emotionally sensitive, gracious, and emotionally aware. \nElement: Water \nMode: Mutable \nRuling Planet: Neptune";
+}
+else if(a == 3 && b >= 21 && b <= 31 || a == 4 && b <= 19){
+  document.getElementById("answer2").innerText="Your sign is Aries. \nThis means you are courageous, determined, confident, enthusiastic, optimistic, honest, and passionate. \nElement: Fire \nMode: Cardinal \nRuling Planet: Mars";
+}
+else if(a == 4 && b >= 20 && b <= 30 || a == 5 && b <= 20){
+  document.getElementById("answer2").innerText="Your sign is Taurus. \nThis eans you are hard-headed, down-to-earth, tenacious, reliable, and loyal. \nElement: Earth \nMode: Fixed \nRuling Planet: Venus";
+}
+else if(a == 5 && b >= 21 && b <= 31 || a == 6 && b <= 20){
+  document.getElementById("answer2").innerText="Your sign is Gemini. \nThis means you are social, talkative, and whimsical, but  can also be indecisive. \nElement: Air \nMode: Mutable \nRuling Planet: Mercury";
+}
+else if(a == 6 && b >= 21 && b <= 30 || a == 7 && b <= 22){
+  document.getElementById("answer2").innerText="Your sign is Cancer. \nThis means you are nurturing, sensitive, compassionate, self-protective, security-seeking and offering. \nElement: Water \nMode: Cardinal \nRuling Planet: Moon";
+}
+else if(a == 7 && b >= 23 && b <= 31 || a == 8 && b <= 22){
+  document.getElementById("answer2").innerText="Your sign is Leo. \nThis means you are dramatic, creative, self-confident, and dominant. \nElement: Fire \nMode: Fixed \nRuling Planet: Sun";
+}
+else if(a == 8 && b >= 23 && b <= 31 || a == 9 && b <= 22){
+  document.getElementById("answer2").innerText="Your sign is Virgo. \nThis means you are humble, self-effacing, industrious, and practical. \nElement: Earth \nMode: Mutable \nRuling Planet: Mercury";
+}
+else if(a == 9 && b >= 23 && b <= 30 || a == 10 && b <= 22){
+  document.getElementById("answer2").innerText="Your sign is Libra. \nThis means you are cooperative, social, idealistic, and harmonious. \nElement: Air \nMode: Cardinal \nRuling Planet: Venus";
+}
+else if(a == 10 && b >= 23 && b <= 31 || a == 11 && b <= 21){
+  document.getElementById("answer2").innerText="Your sign is Scorpio. \nThis means you are fearless, bold, passionate, creative, and loyal. \nElement: Water \nMode: Fixed \nRuling Planet: Mars";
+}
+else if(a == 11 && b >= 22 && b <= 30 || a == 12 && b <= 21){
+  document.getElementById("answer2").innerText="Your sign is Sagittarius. \nThis means you are optimistic, hilarious, fair-minded, honest and intellectual. \nElement: Fire \nMode: Mutable \nRuling Planet: Jupiter";
+}
+
+ }
+   </script>
+
+
+<div class="bottom-container">
+  <!--<a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+  <a class="footer-link" href="https://twitter.com/">Twitter</a>
+  <a class="footer-link" href="https://www.appbrewery.co/">Website</a>-->
+  <p class="copyright">© 2022 Arshia Mathur & Hithu Oleti.</p>
+</div>
+
+
+  </body>
+</html>
